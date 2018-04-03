@@ -37,7 +37,6 @@ class TestController extends CallApiController{
         }
     } while ($stmt->nextRowset());
 
-
     if (1 === count($results)) return $results[0];
     return $results;
 }
