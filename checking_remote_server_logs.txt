@@ -1,0 +1,13 @@
+- direct grep -
+        grep "seach-string" pattern.*
+- regex grep -
+        grep -P "inspe.*tio." turtlemint.2020-02-12-13-00-00.log
+- surround search -
+        grep -B 3 -A 2 'api/inspection' turtlemint.2020-02-12-13-00-00.log
+- tail search (with specific search-text) -
+        tail -f turtlemint.2020-02-12-13-00-00.log | grep 'MFXW2W1Y2XO'
+- grep with line numbers -
+        grep -B 3 -A 2 'inspection' -n turtlemint.2020-02-12-13-00-00.log
+- output only matching segment of the line -
+    - useful when used with -n for line numbers as well
+    	grep 'inspection' -n -o turtlemint.2020-02-12-13-00-00.log
