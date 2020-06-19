@@ -1,0 +1,23 @@
+create a custom domain in your nginx to dev test 
+
+1). 
+  in servers/local.conf file
+  server{   
+                  listen  80;
+                  server_name  mycoolsite.com ;
+                  allow  all;
+                  root /Users/m2dx2/Projects/test_proj/;
+                  index index.html index.php index.htm;
+  }
+
+2).
+add domain in your hosts file
+/private/etc/hosts
+
+add 
+127.0.0.1       localhost mycoolsite.com
+
+3). flush DNS cache 
+ dscacheutil -flushcache
+ 
+4). restart / reload nginx 
