@@ -1,0 +1,9 @@
+alias gc="git checkout"
+alias gpl="git pull origin"
+alias gps="git push origin"
+alias gf="git fetch"
+
+ec() {
+  curl -s -XGET "http://localhost:9200/$@"
+}
+
