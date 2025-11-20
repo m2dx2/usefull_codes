@@ -3,6 +3,8 @@ alias gpl="git pull origin"
 alias gps="git push origin"
 alias gf="git fetch"
 
+alias pp='pbpaste | jq "."'
+
 ec() {
   curl -s -XGET "http://localhost:9200/$@"
 }
